@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.title("AI Trip Planner")
+st.title(":earth_asia: AI Trip Planner")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -20,7 +20,7 @@ if "messages" not in st.session_state:
 st.header("How can I assist you with your travel plans today? Let me know your destination")
 
 
-with st.form():
+with st.form(key="query_form", clear_on_submit=True):
     user_input = st.text_input("User Input", placeholder="e.g. Plan a trip to Paris for 5 days in September")
     submit_button = st.form_submit_button("Send")
 
